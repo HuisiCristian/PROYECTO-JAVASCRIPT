@@ -1,5 +1,114 @@
 header {
   display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  background-color: rgba(0, 255, 200, 0.466);
+}
+header #bienvenida {
+  font-size: 40px;
+  margin: 10px;
+}
+header #contactoheader {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+header #contactoheader a {
+  font-size: 25px;
+}
+header #login {
+  margin: 7px 15px 0 0;
+  align-items: center;
+}
+header #login i {
+  font-size: 50px;
+}
+
+#turnos-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#turnos-main #titulo-solicitar {
+  font-size: 40px;
+}
+#turnos-main .formulario-datos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#turnos-main .formulario-datos #obrasocial {
+  text-align: center;
+}
+#turnos-main #diaturno {
+  text-align: center;
+  font-size: 15px;
+  width: 20vw;
+  height: auto;
+}
+#turnos-main #horario {
+  text-align: center;
+}
+#turnos-main #horario #confirmarturno {
+  margin: 10px;
+  width: 10vw;
+  height: 5vh;
+  background-color: rgb(0, 255, 200);
+}
+#turnos-main #volver-inicio {
+  font-size: 20px;
+}
+
+#mostrarturno-main {
+  margin-top: 20px;
+}
+#mostrarturno-main label {
+  margin: 0;
+  font-size: 20px;
+  color: black;
+}
+#mostrarturno-main #buscadorturno {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#mostrarturno-main #buscadorturno #buscarDNI {
+  width: 10vw;
+  height: auto;
+}
+#mostrarturno-main #buscadorturno #botonfiltradodni {
+  width: 5vw;
+  height: auto;
+}
+#mostrarturno-main #volveratras {
+  text-align: center;
+  font-size: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+main #titulo-index {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 50px;
+}
+main #solicitarTurno {
+  width: 15vw;
+  height: 5vh;
+}
+main #solicitarTurno a {
+  font-size: 20px;
+}
+main #misturnos {
+  width: 15vw;
+  height: 5vh;
+}
+main #misturnos a {
+  font-size: 20px;
 }
 
 * {

@@ -1,0 +1,31 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    #titulo-index{
+        text-align: center;
+        margin-top: 20px;
+        font-size: 50px;
+    }
+
+    #solicitarTurno{
+        
+        width: 15vw;
+        height: 5vh;
+
+        a{
+            font-size: 20px;
+        }
+    }
+
+    #misturnos{
+        width: 15vw;
+        height: 5vh;
+
+        a{
+            font-size: 20px;
+        }
+    }
+
+}
