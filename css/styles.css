@@ -2,7 +2,7 @@ header {
   display: flex;
   justify-content: space-between;
   margin: 0px;
-  background-color: rgba(0, 255, 200, 0.466);
+  background-color: rgba(0, 255, 200, 0.733);
 }
 header #bienvenida {
   font-size: 40px;
@@ -24,10 +24,16 @@ header #login i {
   font-size: 50px;
 }
 
+footer p {
+  text-align: center;
+  font-size: 20px;
+}
+
 #turnos-main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgba(0, 189, 214, 0.788);
 }
 #turnos-main #titulo-solicitar {
   font-size: 40px;
@@ -39,6 +45,9 @@ header #login i {
 }
 #turnos-main .formulario-datos #obrasocial {
   text-align: center;
+}
+#turnos-main .formulario-datos #obrasocial #botonobrasocial {
+  color: white;
 }
 #turnos-main #diaturno {
   text-align: center;
@@ -53,30 +62,33 @@ header #login i {
   margin: 10px;
   width: 10vw;
   height: 5vh;
-  background-color: rgb(0, 255, 200);
+  background-color: rgba(0, 0, 0, 0.966);
+  color: white;
 }
 #turnos-main #volver-inicio {
   font-size: 20px;
 }
 
-#mostrarturno-main {
-  margin-top: 20px;
+#mostrarturno-main #div-mostrarturnos {
+  text-align: center;
+  margin-top: 50px;
 }
-#mostrarturno-main label {
+#mostrarturno-main #div-mostrarturnos label {
   margin: 0;
-  font-size: 20px;
+  font-size: 50px;
   color: black;
 }
-#mostrarturno-main #buscadorturno {
+#mostrarturno-main #div-mostrarturnos #buscadorturno {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#mostrarturno-main #buscadorturno #buscarDNI {
+#mostrarturno-main #div-mostrarturnos #buscadorturno #buscarDNI {
+  text-align: center;
   width: 10vw;
   height: auto;
 }
-#mostrarturno-main #buscadorturno #botonfiltradodni {
+#mostrarturno-main #div-mostrarturnos #buscadorturno #botonfiltradodni {
   width: 5vw;
   height: auto;
 }
@@ -84,12 +96,35 @@ header #login i {
   text-align: center;
   font-size: 20px;
 }
+#mostrarturno-main .card-turno {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 10px;
+}
+#mostrarturno-main .card-turno .boton-cancelar {
+  width: 12vw;
+  height: auto;
+}
+#mostrarturno-main #volveratras {
+  font-size: 30px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  background-color: rgba(0, 189, 214, 0.788);
 }
 main #titulo-index {
   text-align: center;

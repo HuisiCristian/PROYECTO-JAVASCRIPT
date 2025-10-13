@@ -1,32 +1,51 @@
 #mostrarturno-main{
-    margin-top: 20px;
+    #div-mostrarturnos{
+        text-align: center;
+        margin-top: 50px;
+        label{
+            margin: 0;
+            font-size: 50px;
+            color: black;
+            }
 
-    label{
-        margin: 0;
-        font-size: 20px;
-        color: black;
+        #buscadorturno{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            #buscarDNI{
+                text-align: center;
+                width: 10vw;
+                height: auto;
+            }
+
+            #botonfiltradodni{
+                width: 5vw;
+                height: auto;
+            }
         }
 
-    #buscadorturno{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-
-        #buscarDNI{
-            width: 10vw;
-            height: auto;
-        }
-
-        #botonfiltradodni{
-            width: 5vw;
-            height: auto;
-        }
     }
 
     #volveratras{
         text-align: center;
         font-size: 20px;
+
     }
 
+    .card-turno{
+        background-color: rgb(255, 255, 255);
+        color: black; 
+        padding: 10px;
+
+        .boton-cancelar{
+            width: 12vw;
+            height: auto;
+        }
+    }
+
+    #volveratras{
+        font-size: 30px;
+    }
 }

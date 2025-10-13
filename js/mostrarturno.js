@@ -19,6 +19,7 @@ else{
 function cardTurnos(turnos){
     turnos.forEach((dato, index) =>{
         const card = document.createElement("div")
+        card.classList.add("card-turno")
         card.innerHTML=`<h3> ${dato.nombre.toUpperCase()} ${dato.apellido.toUpperCase()} </h3>
                         <h4> DNI: ${dato.dni} </h4>
                         <h4> Fecha: ${dato.fecha} </h4>
@@ -59,7 +60,7 @@ botonbuscarturno.onclick =() => {
         return
     }
 
-    const turnosfiltrados = turnos.filter( turno => turno.dni.includes(dnibuscado))
+    const turnosfiltrados = turnos.filter( turno => turno.dni === (dnibuscado.trim()))
 
     contenedorturnos.innerHTML = ""
 
