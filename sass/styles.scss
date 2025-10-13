@@ -1,0 +1,14 @@
+@use "variables" as v;
+@use "header";
+@use "footer";
+@use "turnos";
+@use "mostrarturnos";
+@use "main";
+@use "inicio";
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
