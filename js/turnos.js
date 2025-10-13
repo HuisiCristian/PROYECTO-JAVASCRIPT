@@ -1,7 +1,9 @@
 
-// Creamos array de turnos + validaciones
+// CARGAMOS EL LOCALSTORAGE DEL ARRAY, SI NO TIENE NADA GUARDADO SE CREA UN ARRAY VACIO
 
 let turnos = JSON.parse(localStorage.getItem("turnos")) || []
+
+// FUNCION PARA CREAR EL TURNO
 
 function crearTurno(){
     return{
@@ -16,6 +18,8 @@ function crearTurno(){
     }
 }
 
+// FUNCION DE VALIDACION
+
 function validarTurno(turno){
     if(!turno.nombre) return "El nombre es obligatorio"
     if(!turno.apellido) return "El apellido es obligatorio"
@@ -29,7 +33,7 @@ function validarTurno(turno){
     return true
 }
 
-// Funcion para poder seleccionar en el DROPDOWN
+// FUNCION PARA SELECCIONAR EL DROPDOWN
 
 function configurarDropdown(botonID,menuID){
     const boton = document.getElementById(botonID)
@@ -47,7 +51,7 @@ function configurarDropdown(botonID,menuID){
 configurarDropdown("botonobrasocial","menuobrasocial")
 configurarDropdown("botonhorarios", "menuhorarios")
 
-// Guardamos turnos en el array
+// GUARDAMOS TURNOS EN EL LOCALSTORAGE
 
 let botonconfirmarturno = document.getElementById("confirmarturno")
 let contenedorErrores = document.getElementById("errores")

@@ -1,9 +1,11 @@
-
+// CARGAMOS EL LOCALSTORAGE DEL ARRAY, SI NO TIENE NADA GUARDADO SE CREA UN ARRAY VACIO
 
 let turnos = JSON.parse(localStorage.getItem("turnos")) || []
 
+
 let contenedorturnos = document.getElementById("listaTurnos")
 
+// SI NO HAY TURNOS GUARDADOS, MOSTRAMOS UN MENSAJE
 
 if(turnos.length === 0){
     contenedorturnos.innerText = "Ingrese un DNI para ver sus turnos"
@@ -29,7 +31,7 @@ function cardTurnos(turnos){
 
 
 
-// Boton para cancelar cancelar un turno
+// BOTON DE CANCELACION (ELIMINA TURNOS)
 function cancelarturno(){
     let botonescancelar = document.querySelectorAll(".boton-cancelar")
 
@@ -43,7 +45,7 @@ function cancelarturno(){
     })
 }
 
-// Filtrado de turnos por DNI
+// FILTRADO DE TURNOS POR DNI
 
 let inputBuscar = document.getElementById("buscarDNI")
 let botonbuscarturno = document.getElementById("botonfiltradodni")
