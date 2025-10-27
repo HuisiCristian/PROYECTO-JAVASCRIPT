@@ -6,7 +6,9 @@ header {
 }
 header #bienvenida {
   font-size: 40px;
-  margin: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: black;
 }
 header #contactoheader {
   display: flex;
@@ -15,6 +17,11 @@ header #contactoheader {
 }
 header #contactoheader a {
   font-size: 25px;
+  text-decoration: none;
+  color: black;
+}
+header #contactoheader a i {
+  margin: 5px;
 }
 header #login {
   margin: 7px 15px 0 0;
@@ -24,6 +31,9 @@ header #login i {
   font-size: 50px;
 }
 
+footer {
+  background-color: rgba(0, 189, 214, 0.212);
+}
 footer p {
   text-align: center;
   font-size: 20px;
@@ -33,7 +43,7 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(0, 189, 214, 0.788);
+  background-color: rgba(0, 189, 214, 0.212);
 }
 #turnos-main #titulo-solicitar {
   font-size: 40px;
@@ -42,9 +52,30 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 5px;
+}
+#turnos-main .formulario-datos #nombre-apellido {
+  gap: 15px;
+}
+#turnos-main .formulario-datos #nombre-apellido div {
+  display: flex;
+}
+#turnos-main .formulario-datos #dni-celular {
+  gap: 15px;
+}
+#turnos-main .formulario-datos #dni-celular div {
+  display: flex;
+}
+#turnos-main .formulario-datos #mail-input {
+  display: flex;
+}
+#turnos-main .formulario-datos #mail-input input {
+  width: 15vw;
 }
 #turnos-main .formulario-datos #obrasocial {
+  display: flex;
   text-align: center;
+  gap: 2px;
 }
 #turnos-main .formulario-datos #obrasocial #botonobrasocial {
   color: white;
@@ -55,20 +86,30 @@ footer p {
   width: 20vw;
   height: auto;
 }
+#turnos-main #diaturno #calendario #fecha {
+  text-align: center;
+}
 #turnos-main #horario {
   text-align: center;
 }
 #turnos-main #horario #confirmarturno {
   margin: 10px;
-  width: 10vw;
-  height: 5vh;
-  background-color: rgba(0, 0, 0, 0.966);
-  color: white;
+  width: 15vw;
+  height: 7vh;
+  background-color: rgba(0, 255, 200, 0.733);
+  color: black;
+  font-size: 20px;
+  border-radius: 10px;
 }
 #turnos-main #volver-inicio {
+  width: 7vw;
+  height: auto;
   font-size: 20px;
 }
 
+#mostrarturno-main {
+  background-color: rgba(0, 189, 214, 0.212);
+}
 #mostrarturno-main #div-mostrarturnos {
   text-align: center;
   margin-top: 50px;
@@ -92,9 +133,20 @@ footer p {
   width: 5vw;
   height: auto;
 }
+#mostrarturno-main #div-mostrarturnos #listaTurnos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#mostrarturno-main #div-mostrarturnos #listaTurnos .card-turno {
+  background-image: url(../assets/fondo\ card.jpg);
+}
 #mostrarturno-main #volveratras {
   text-align: center;
-  font-size: 20px;
+  font-size: 30px;
+}
+#mostrarturno-main #volveratras a {
+  text-decoration: none;
 }
 #mostrarturno-main .card-turno {
   background-color: rgb(255, 255, 255);
@@ -105,14 +157,14 @@ footer p {
   width: 12vw;
   height: auto;
 }
-#mostrarturno-main #volveratras {
-  font-size: 30px;
-}
 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: url(../assets/fondo2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main {
@@ -123,8 +175,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  background-color: rgba(0, 189, 214, 0.788);
+  background-color: rgba(0, 189, 214, 0.212);
 }
 main #titulo-index {
   text-align: center;
@@ -137,6 +190,7 @@ main #solicitarTurno {
 }
 main #solicitarTurno a {
   font-size: 20px;
+  text-decoration: none;
 }
 main #misturnos {
   width: 15vw;
@@ -144,6 +198,22 @@ main #misturnos {
 }
 main #misturnos a {
   font-size: 20px;
+  text-decoration: none;
+}
+
+.flatpickr-calendar .flatpickr-day:not(.flatpickr-disabled) {
+  background-color: #dff7df;
+  color: #0b6623;
+  border-radius: 6px;
+}
+.flatpickr-calendar .flatpickr-day:not(.flatpickr-disabled):hover {
+  background-color: #c7f0c8;
+}
+.flatpickr-calendar .flatpickr-day.flatpickr-disabled {
+  background-color: #f0f0f0;
+  color: #555;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 * {

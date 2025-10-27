@@ -1,4 +1,7 @@
+@use "variables" as v;
+
 footer{
+    background-color: v.$colorFondo;
     p{
         text-align: center;
         font-size: 20px;

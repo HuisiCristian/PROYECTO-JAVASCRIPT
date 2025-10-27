@@ -1,13 +1,15 @@
-
+@use "variables" as v;
 header{
     display: flex;
     justify-content: space-between;
     margin: 0px;
-    background-color: rgba(0, 255, 200, 0.733);
+    background-color: v.$colorFondoHeader;
 
     #bienvenida{
         font-size: 40px;
-        margin: 10px;
+        margin-left: 10px;
+        text-decoration: none;
+        color: black;
     }
     
     #contactoheader{
@@ -15,8 +17,13 @@ header{
         gap: 20px;
         align-items: center;
         
-        a{
-            font-size: 25px;     
+        a{  
+            font-size: 25px; 
+            text-decoration: none;
+            color: black;
+            i{
+                margin: 5px;
+            }
         }
     }
 

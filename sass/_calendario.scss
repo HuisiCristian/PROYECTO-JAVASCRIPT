@@ -1,0 +1,24 @@
+.flatpickr-calendar {
+    
+    .flatpickr-day {
+        
+    // Días habilitados
+    &:not(.flatpickr-disabled) {
+        background-color: #dff7df; 
+        color: #0b6623;            
+        border-radius: 6px;
+
+    &:hover {
+        background-color: #c7f0c8;
+        }
+    }
+
+    // Días deshabilitados
+    &.flatpickr-disabled {
+        background-color: #f0f0f0; 
+        color: #555;               
+        opacity: 1;                
+        cursor: not-allowed;
+        }
+    }
+}

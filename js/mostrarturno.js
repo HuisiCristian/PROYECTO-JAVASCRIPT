@@ -2,17 +2,7 @@
 
 let turnos = JSON.parse(localStorage.getItem("turnos")) || []
 
-
 let contenedorturnos = document.getElementById("listaTurnos")
-
-// SI NO HAY TURNOS GUARDADOS, MOSTRAMOS UN MENSAJE
-
-if(turnos.length === 0){
-    contenedorturnos.innerText = "Ingrese un DNI para ver sus turnos"
-}
-else{
-
-}
 
 // CARD DE TURNOS
 
@@ -39,12 +29,33 @@ function cancelarturno(){
     botonescancelar.forEach(boton=>{
         boton.onclick=()=>{
             const index = boton.getAttribute("data-index")
-            turnos.splice(index, 1)
-            localStorage.setItem("turnos", JSON.stringify(turnos))
-            location.reload()
+
+            Swal.fire({
+                title: "Desea cancelar su turno?",
+                icon: "warning",
+                confirmButtonText: "SI",
+                showCancelButton: true,
+                cancelButtonText: "NO",
+
+            }).then((resultado =>{
+                if(resultado.isConfirmed){
+                    turnos.splice(index, 1)
+                    localStorage.setItem("turnos", JSON.stringify(turnos))
+                    
+                    Swal.fire({
+                        title:"Su turno ha sido cancelado correctamente",
+                        icon: "success",
+                    }).then(()=>{
+                        location.reload()
+                    })
+                    
+                }
+            }))
+            
         }
     })
 }
+
 
 // FILTRADO DE TURNOS POR DNI
 
