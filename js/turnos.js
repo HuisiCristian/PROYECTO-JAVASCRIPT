@@ -3,6 +3,63 @@
 
 let turnos = JSON.parse(localStorage.getItem("turnos")) || []
 
+// CARGAMOS EL ARCHIVO DATA.JSON
+
+const URL = "../db/data.json"
+
+function obtenerDataJSON (){
+        fetch(URL)
+            .then(response => response.json())
+            .then(data => {
+                const menuObraSocial = document.getElementById("menuobrasocial")
+
+                data.obrasSociales.forEach((os => {
+                    
+                    const li = document.createElement("li")
+                    const a = document.createElement("a")
+
+                    a.classList.add("dropdown-item")
+                    a.innerText = os
+                    a.onclick = () => {
+                        document.getElementById("botonobrasocial").innerText = os
+                    }
+
+                    li.appendChild(a)
+                    menuObraSocial.appendChild(li)
+                }))
+
+                const dropdownHorarios = document.getElementById("menuhorarios")
+
+                data.horarios.forEach(h =>{
+
+                    const li = document.createElement("li")
+                    const a = document.createElement("a")
+
+                    a.classList.add("dropdown-item")
+                    a.innerText = h
+                    a.onclick = () => {
+                        document.getElementById("botonhorarios").innerText = h
+                    }
+
+                    li.appendChild(a)
+                    dropdownHorarios.appendChild(li)
+                })
+            })
+
+            .catch( () => {
+                Swal.fire({
+                    icon: "error",
+                    title: "Error al cargar datos",
+                    text: "No se pudo obtener la informacion, intente nuevamente.",
+
+                })
+
+            })
+}
+
+
+
+
 // FUNCION PARA CREAR EL TURNO
 
 function crearTurno(){
@@ -165,18 +222,18 @@ flatpickr("#fecha",{
 
 // OBTENGO LOS HORARIOS 
 
-function obetenerTodosHorarios(){
+function obtenerTodosHorarios(){
     const items = document.querySelectorAll("#menuhorarios .dropdown-item")
 
     return [...items].map(items => items.innerText.trim())
 }
 
 
-// FILTRAMOS FECHA Y HORARIOS OCUPADOS
+// FILTRAMOS FECHA Y HORARI OS OCUPADOS
 
 function actualizarHorariosDisponibles (fechaseleccionada){
 
-    const horariostotales = obetenerTodosHorarios()
+    const horariostotales = obtenerTodosHorarios()
     const menu = document.getElementById("menuhorarios")
 
     // Aca filtramos los horarios ocupados
@@ -216,3 +273,5 @@ document.getElementById("fecha").addEventListener("change", (e) => {
     const fechaSeleccionada = e.target.value; // toma la fecha
     actualizarHorariosDisponibles(fechaSeleccionada);
 })
+
+obtenerDataJSON()
