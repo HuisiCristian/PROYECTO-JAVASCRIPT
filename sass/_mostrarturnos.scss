@@ -6,10 +6,14 @@
     #div-mostrarturnos{
         text-align: center;
         margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
         label{
             margin: 0;
-            font-size: 50px;
+            font-size: 70px;
             color: black;
+            font-family: v.$fuentePrincipal;
             }
 
         #buscadorturno{
@@ -21,12 +25,19 @@
             #buscarDNI{
                 text-align: center;
                 width: 10vw;
-                height: auto;
+                height: 5vh;
+                font-family: v.$fuenteOpcional;
             }
 
             #botonfiltradodni{
                 width: 5vw;
-                height: auto;
+                height: 5vh;
+                font-family: v.$fuenteOpcional;
+                transition: 0.3s ease;
+                border-radius: 5px;
+            }
+            #botonfiltradodni:hover{
+                background-color: v.$colorFondoHeader;
             }
         }
 
@@ -44,11 +55,23 @@
 
     #volveratras{
         text-align: center;
-        font-size: 30px;
+        font-size: 25px;
+        font-family: v.$fuenteSecundaria;
+        width: 5vw;
+        height: auto;
+        border-radius: 5px;
+        background-color: v.$colorFondoHeader;
+        transition: 0.3s ease;
         a{
             text-decoration: none;
+            color: black;
         }
+        
 
+    }
+
+    #volveratras:hover{
+        background-color: rgba(255, 0, 0, 0.61);
     }
 
     .card-turno{
@@ -59,6 +82,12 @@
         .boton-cancelar{
             width: 12vw;
             height: auto;
+            transition: 0.3s ease;
+            border-radius: 5px;
+        }
+        .boton-cancelar:hover{
+            scale: 1.03;
+            background-color: rgba(255, 0, 0, 0.801);
         }
     }
 

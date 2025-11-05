@@ -7,32 +7,51 @@ main{
     justify-content: center;
     gap: 10px;
     background-color: v.$colorFondo;
+
     
     #titulo-index{
         text-align: center;
         margin-top: 20px;
         font-size: 50px;
+        font-family: v.$fuentePrincipal;
     }
 
     #solicitarTurno{
-        
+
         width: 15vw;
         height: 5vh;
-
+        transition: 0.1s ease;
+        border-radius: 5px;
         a{
             font-size: 20px;
             text-decoration: none;
+            color: black;
+            font-family: v.$fuentePrincipal;
         }
+    }
+
+    #solicitarTurno:hover{
+        transform: scale(1.02);
+        background-color: v.$colorFondoHeader;
+
     }
 
     #misturnos{
         width: 15vw;
         height: 5vh;
-
+        transition: 0.1s ease;
+        border-radius: 5px;
+        font-family: v.$fuentePrincipal;
         a{
             font-size: 20px;
             text-decoration: none;
+            color: black;
         }
+    }
+
+    #misturnos:hover{
+        transform: scale (1.02);
+        background-color: v.$colorFondoHeader;
     }
 
 }
