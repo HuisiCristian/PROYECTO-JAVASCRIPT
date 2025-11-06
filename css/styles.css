@@ -168,6 +168,10 @@ footer p {
 #mostrarturno-main #div-mostrarturnos #listaTurnos .card-turno {
   background-image: url(../assets/fondo\ card.jpg);
 }
+#mostrarturno-main #div-mostrarturnos #listaTurnos p {
+  font-family: Parkinsans;
+  color: black;
+}
 #mostrarturno-main #volveratras {
   text-align: center;
   font-size: 25px;
